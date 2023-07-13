@@ -3,13 +3,13 @@ import { Address, BigDecimal } from "@graphprotocol/graph-ts/index";
 import { Bundle, Pair, Token } from "../generated/schema";
 import { ADDRESS_ZERO, factoryContract, ONE_BD, ZERO_BD } from "./utils";
 
-let WETH_ADDRESS = "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2";
-let WETH_USDT_PAIR = "0x17c1ae82d99379240059940093762c5e4539aba5";
-let WETH_USDC_PAIR = "0x2e8135be71230c6b1b4045696d41c09db0414226";
+let WETH_ADDRESS = "0xa27a128dd70479fd2b37662223c6523f10ebc21a";
+let WETH_USDT_PAIR = "0x6b284f08bb8f23947f9cd6ca03ed652f4678831c";
+let WETH_BUSD_PAIR = "0x7b700d06187dd27dae3f50adb10b97dd219ba264"; // USDC not yet deployed
 
 export function getETHPriceInUSD(): BigDecimal {
   // fetch eth prices for each stablecoin
-  let usdcPair = Pair.load(WETH_USDC_PAIR); // usdc is token0
+  let usdcPair = Pair.load(WETH_BUSD_PAIR); // usdc is token0
   let usdtPair = Pair.load(WETH_USDT_PAIR); // usdt is token1
 
   if (usdcPair !== null && usdtPair !== null) {
@@ -32,15 +32,15 @@ export function getETHPriceInUSD(): BigDecimal {
 
 // token where amounts should contribute to tracked volume and liquidity
 let WHITELIST: string[] = [
-  "0x418d75f65a02b3d53b2418fb8e1fe493759c7605", // WBNB
-  "0x4fabb145d64652a948d72533023f6e7a623c7c53", // BUSD
-  "0xdac17f958d2ee523a2206206994597c13d831ec7", // USDT
-  "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48", // USDC
+  "0xa27a128dd70479fd2b37662223c6523f10ebc21a", // WFDX
+  "0xe5e8ca35b7bf7045288bf6731f071f9f98c5ce47", // BUSD
+  "0x3f851192d8b2d8dadc7c2b49f7a9fa27cdcea680", // USDT
+  // "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48", // USDC
   // "0x23396cf899ca06c4472205fc903bdb4de249d6fc", // UST
   // "0x7130d2a12b9bcbfae4f2634d864a1ee1ce3ead9c", // BTCB
-  "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599", // WBTC (new)
+  "0x51db507c3afad70b944bd9d3b11822a515bbad82", // WBTC (new)
 
-  "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2", // ETH
+  "0x88435653afebe9806cff334f2f04a1fdd5d4eb63", // ETH
 ];
 
 // minimum liquidity for price to get tracked

@@ -9,6 +9,9 @@
     "auth": "graph auth --product hosted-service SUBGRAPH_ACCESS_TOKEN",
     "codegen": "graph codegen subgraph.yaml",
     "build": "graph build subgraph.yaml",
-    "deploy": "graph deploy --product hosted-service pancakeswap/exhange-eth"
+    "create": "graph create miexxswap/exhange-fdax --node http://103.42.59.207:8020",
+    "deploy": "graph deploy --product hosted-service pancakeswap/exhange-eth",
+    "deploy:fdax": "graph deploy --node https://api.miexx.com/deploy/ --ipfs https://api.miexx.com/ipfs/ miexxswap/exhange-fdax subgraph.yaml",
+    "remove": "graph remove miexxswap/exhange-fdax --node http://103.42.59.207:8020"
   }
 }

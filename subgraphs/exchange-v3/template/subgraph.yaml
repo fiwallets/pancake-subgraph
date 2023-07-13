@@ -8,14 +8,14 @@ features:
 dataSources:
   - kind: ethereum/contract
     name: Factory
-    network: mainnet
+    network: fdax
     source:
-      address: "0x0bfbcf9fa4f9c56b0f40a671ad40e0805a091865"
+      address: "0x7d7d380f91142d464819014bc33530d56bbf46c0"
       abi: Factory
-      startBlock: 16950686
+      startBlock: 1658963
     mapping:
       kind: ethereum/events
-      apiVersion: 0.0.4
+      apiVersion: 0.0.5
       language: wasm/assemblyscript
       file: ./mappings/factory.ts
       entities:
@@ -37,14 +37,14 @@ dataSources:
           handler: handlePoolCreated
   - kind: ethereum/contract
     name: NonfungiblePositionManager
-    network: mainnet
+    network: fdax
     source:
-      address: "0x46a15b0b27311cedf172ab29e4f4766fbe7f4364"
+      address: "0x9b4ec2635ffbf2b31025cf4739b88a5506c66fec"
       abi: NonfungiblePositionManager
-      startBlock: 16944786
+      startBlock: 1658966
     mapping:
       kind: ethereum/events
-      apiVersion: 0.0.4
+      apiVersion: 0.0.5
       language: wasm/assemblyscript
       file: ./mappings/position-manager.ts
       entities:
@@ -71,12 +71,12 @@ dataSources:
 templates:
   - kind: ethereum/contract
     name: Pool
-    network: mainnet
+    network: fdax
     source:
       abi: Pool
     mapping:
       kind: ethereum/events
-      apiVersion: 0.0.4
+      apiVersion: 0.0.5
       language: wasm/assemblyscript
       file: ./mappings/core.ts
       entities:
