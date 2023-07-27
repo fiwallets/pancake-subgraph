@@ -6,7 +6,7 @@ module.exports = {
     wNativeAddress: "0xa27a128dd70479fd2b37662223c6523f10ebc21a",
     v3: {
       // WFDAX-USDT 500
-      wNativeStablePoolAddress: "0x7b700d06187dd27dae3f50adb10b97dd219ba264",
+      wNativeStablePoolAddress: "0x15900188ef55317fa1d9f3c9a57fdd01e07dcd72",
       stableIsToken0: true,
       factoryAddress: "0x7d7d380f91142d464819014bc33530d56bbf46c0",
       startBlock: 1658963,

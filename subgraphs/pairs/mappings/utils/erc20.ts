@@ -32,5 +32,5 @@ export function fetchDecimals(address: Address): BigInt {
     return BigInt.fromI32(decimalResult.value);
   }
 
-  return null;
+  return BigInt.fromI32(0);
 }

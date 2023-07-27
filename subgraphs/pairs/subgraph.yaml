@@ -5,15 +5,15 @@ schema:
   file: ./schema.graphql
 dataSources:
   - kind: ethereum/contract
-    name: Factory
-    network: bsc
+    name: FactoryV2
+    network: fdax
     source:
-      address: '0xcA143Ce32Fe78f1f7019d7d551a6402fC5350c73'
+      address: '0x5379089b6284E75c74edF7994FF0Ce2899b577f4'
       abi: Factory
-      startBlock: 6809737
+      startBlock: 1657739
     mapping:
       kind: ethereum/events
-      apiVersion: 0.0.4
+      apiVersion: 0.0.5
       language: wasm/assemblyscript
       file: ./mappings/factory.ts
       entities:

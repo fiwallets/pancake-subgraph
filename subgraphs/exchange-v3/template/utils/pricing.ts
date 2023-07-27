@@ -7,7 +7,7 @@ import { exponentToBigDecimal, safeDiv } from "./index";
 // prettier-ignore
 const WETH_ADDRESS = "0xa27a128dd70479fd2b37662223c6523f10ebc21a";
 // prettier-ignore
-const USDC_WETH_03_POOL = "0x7b700d06187dd27dae3f50adb10b97dd219ba264";
+const USDC_WETH_03_POOL = "0x15900188ef55317fa1d9f3c9a57fdd01e07dcd72";
 
 const STABLE_IS_TOKEN0 = "true" as string;
 
